@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie 1 Details</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2d9f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #6c3b82;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .movie-details {
+            text-align: center;
+        }
+
+        .movie-details img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .booking-options {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .booking-button {
+            background-color: #6c3b82;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .booking-button:hover {
+            background-color: #522c66;
+        }
+
+        .seating-options {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .seating-options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .seating-options select {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .seating-options button {
+            background-color: #6c3b82;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .seating-options button:hover {
+            background-color: #522c66;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Movie 1 Details</h1>
+    </header>
+    <div class="container">
+        <div class="movie-details">
+            <h2>Movie 3</h2>
+            <img src="movie3.png" alt="Movie 3">
+            <p>Release Year: 2023</p>
+           
+        </div>
+        <div class="booking-options">
+            <h3>Booking Options</h3>
+            <p>Select the number of seats and book tickets:</p>
+            <button class="booking-button" onclick="showSeatingOptions()">Book Now</button>
+        </div>
+        <div class="seating-options" id="seatingOptions">
+            <h3>Seating Options</h3>
+            <p>Select the number of seats:</p>
+            <label for="numSeats">Number of Seats:</label>
+            <select id="numSeats">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                
+            </select>
+            <button class="booking-button">Confirm Booking</button>
+        </div>
+    </div>
+
+    <script>
+        function showSeatingOptions() {
+            const seatingOptions = document.getElementById("seatingOptions");
+            seatingOptions.style.display = "block";
+        }
+    </script>
+</body>
+</html>
